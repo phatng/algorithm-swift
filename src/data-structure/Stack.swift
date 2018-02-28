@@ -4,14 +4,6 @@
 public struct Stack<Element> {
   private var stack = [Element]()
 
-  public var count: Int {
-    return stack.count
-  }
-
-  public var top: Element? {
-    return stack.last
-  }
-
   public mutating func push(_ element: Element) {
     stack.append(element)
   }
@@ -19,4 +11,12 @@ public struct Stack<Element> {
   public mutating func pop() -> Element? {
     return stack.removeLast()
   }
+
+  public var top: Element? {
+    return stack.last
+  }
+
+  public var count: Int {
+    return stack.count
+  }  
 }
